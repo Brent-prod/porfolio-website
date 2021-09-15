@@ -35,8 +35,12 @@
             align-items: center;
             margin-left: 30px;
 
+            @include mobile {
+               display: none;
+            }
+
             .icon{ // for the material-ui icons
-               font-size: 18px;
+               font-size: 28px;
                margin-right: 5px;
             }
 
