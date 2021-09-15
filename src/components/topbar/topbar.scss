@@ -7,7 +7,9 @@
    color: $mainColor;
 	position: fixed;
 	top: 0;
-   z-index: 2; 
+   z-index: 3; 
+   transition: all 1s ease;
+
 
    .wrapper{
       padding: 10px 30px;
@@ -59,6 +61,29 @@
                width: 100%;
                height: 3px;
                background-color: $mainColor;
+               transform-origin: left; // to make the lines start from the left part of the hambburger
+               transition: all 2s ease; 
+            }
+         }
+      }
+   }
+
+   &.active{ // this is to change the color of the top bar based on the topbar active class name
+      background-color: $mainColor;
+      color: white;
+
+      .hamburger{
+         span{
+            &:first-child{
+               background-color: white;
+               transform: rotate(45deg);
+            }
+            &:nth-child(2){ // this is to make the middle line invisible when transformed
+               opacity: 0;
+            }
+            &:last-child{
+               background-color: white;
+               transform: rotate(-45deg);
             }
          }
       }

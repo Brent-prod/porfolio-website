@@ -1,3 +1,72 @@
-.intro{
-   background-color: lightpink
+.intro {
+	background-color: white;
+	display: flex;
+
+	// this is to split however we like-in this case half half
+	.left {
+		flex: 0.5;
+		overflow: hidden;
+
+		.imgContainer {
+			width: 700px;
+			height: 700px;
+			background-color: crimson;
+			border-radius: 50%; // to make it round background
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			float: right; // this is to make the background align to the center of the page
+
+			img {
+				width: 90%;
+			}
+		}
+	}
+
+	.right {
+		flex: 0.5;
+		position: relative;
+
+		.wrapper {
+			width: 100%;
+			height: 100%;
+			padding-left: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			h1 {
+				font-size: 60px;
+				margin: 10px 0;
+			}
+			h2 {
+				font-size: 35px;
+			}
+			h3 {
+				font-size: 30px;
+
+            span{
+               font-size: inherit;
+               color: crimson;
+            }
+			}
+		}
+		a {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+
+			img {
+				width: 50px;
+            animation: arrowBlink 2s infinite; // this refers to the keyframe below so after 2 seconds will then go to keyframe
+			}
+
+         @keyframes arrowBlink { // this means that starts from 100% and goes to 0
+            100%{
+               opacity: 0;
+            }
+            
+         }
+		}
+	}
 }
