@@ -4,7 +4,7 @@
 	background-color: white;
 	display: flex;
 
-	@include mobile{
+	@include mobile {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -15,8 +15,8 @@
 		overflow: hidden;
 
 		.imgContainer {
-			width: 700px;
-			height: 700px;
+			width: 900px;
+			height: 900px;
 			background-color: crimson;
 			border-radius: 50%; // to make it round background
 			display: flex;
@@ -24,14 +24,14 @@
 			justify-content: center;
 			float: right; // this is to make the background align to the center of the page
 
-			@include mobile{
+			@include mobile {
 				align-items: flex-start;
 			}
 
 			img {
 				width: 90%;
 
-				@include mobile{
+				@include mobile {
 					height: 50%;
 				}
 			}
@@ -59,7 +59,7 @@
 				font-size: 60px;
 				margin: 10px 0;
 
-				@include mobile{
+				@include mobile {
 					font-size: 40px;
 				}
 			}
@@ -69,27 +69,27 @@
 			h3 {
 				font-size: 30px;
 
-				@include mobile{
+				@include mobile {
 					font-size: 20px;
 				}
 
-            span{
-               font-size: inherit;
-               color: crimson;
-            }
+				span {
+					font-size: inherit;
+					color: crimson;
+				}
 
-            .ityped-cursor{
-               animation: blink 1s infinite;
-            }
+				.ityped-cursor {
+					animation: blink 1s infinite;
+				}
 
-            @keyframes blink {
-               50%{
-                  opacity: 1;
-               }
-               100%{
-                  opacity: 0;
-               }
-            }
+				@keyframes blink {
+					50% {
+						opacity: 1;
+					}
+					100% {
+						opacity: 0;
+					}
+				}
 			}
 		}
 		a {
@@ -99,15 +99,15 @@
 
 			img {
 				width: 50px;
-            animation: arrowBlink 2s infinite; // this refers to the keyframe below so after 2 seconds will then go to keyframe
+				animation: arrowBlink 2s infinite; // this refers to the keyframe below so after 2 seconds will then go to keyframe
 			}
 
-         @keyframes arrowBlink { // this means that starts from 100% and goes to 0
-            100%{
-               opacity: 0;
-            }
-            
-         }
+			@keyframes arrowBlink {
+				// this means that starts from 100% and goes to 0
+				100% {
+					opacity: 0;
+				}
+			}
 		}
 	}
 }

@@ -4,92 +4,101 @@
 	width: 100%;
 	height: 70px;
 	background-color: white;
-   color: $mainColor;
+	color: $mainColor;
 	position: fixed;
 	top: 0;
-   z-index: 3; 
-   transition: all 1s ease;
+	z-index: 3;
+	transition: all 1s ease;
 
+	.wrapper {
+		padding: 10px 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-   .wrapper{
-      padding: 10px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+		.left {
+			display: flex;
+			align-items: center;
 
-      .left{
-         display: flex;
-         align-items: center;
+			.logo {
+				font-size: 40px;
+				font-weight: 700;
+				text-decoration: none;
+				color: inherit;
+				margin-right: 40px;
+			}
 
+			.itemContainer {
+				display: flex;
+				align-items: center;
+				margin-left: 30px;
 
-         .logo{
-            font-size: 40px;
-            font-weight: 700;
-            text-decoration: none;
-            color: inherit;
-            margin-right: 40px;
-         }
+				@include mobile {
+					display: none;
+				}
 
-         .itemContainer{ 
-            display: flex;
-            align-items: center;
-            margin-left: 30px;
+				.icon {
+					// for the material-ui icons
+					font-size: 38px;
+					margin-right: 5px;
+				}
 
-            @include mobile {
-               display: none;
-            }
+				span {
+					// for the text next to the icons
+					font-size: 18px;
+					font-weight: 500;
+					text-decoration: none;
+				}
+				a {
+					// for the text next to the icons
+					font-size: 18px;
+					font-weight: 500;
+					text-decoration: none;
+					color: inherit;
+				}
+			}
+		}
 
-            .icon{ // for the material-ui icons
-               font-size: 28px;
-               margin-right: 5px;
-            }
+		.right {
+			.hamburger {
+				width: 32px;
+				height: 25px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				cursor: pointer;
 
-            span{ // for the text next to the icons
-               font-size: 15px;
-               font-weight: 500;
-            }
-         }
-      }
+				span {
+					width: 100%;
+					height: 3px;
+					background-color: $mainColor;
+					transform-origin: left; // to make the lines start from the left part of the hambburger
+					transition: all 2s ease;
+				}
+			}
+		}
+	}
 
-      .right{
+	&.active {
+		// this is to change the color of the top bar based on the topbar active class name
+		background-color: $mainColor;
+		color: white;
 
-         .hamburger{
-            width: 32px;
-            height: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
-
-            span{
-               width: 100%;
-               height: 3px;
-               background-color: $mainColor;
-               transform-origin: left; // to make the lines start from the left part of the hambburger
-               transition: all 2s ease; 
-            }
-         }
-      }
-   }
-
-   &.active{ // this is to change the color of the top bar based on the topbar active class name
-      background-color: $mainColor;
-      color: white;
-
-      .hamburger{
-         span{
-            &:first-child{
-               background-color: white;
-               transform: rotate(45deg);
-            }
-            &:nth-child(2){ // this is to make the middle line invisible when transformed
-               opacity: 0;
-            }
-            &:last-child{
-               background-color: white;
-               transform: rotate(-45deg);
-            }
-         }
-      }
-   }
+		.hamburger {
+			span {
+				&:first-child {
+					background-color: white;
+					transform: rotate(45deg);
+				}
+				&:nth-child(2) {
+					// this is to make the middle line invisible when transformed
+					opacity: 0;
+				}
+				&:last-child {
+					background-color: white;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
 }
