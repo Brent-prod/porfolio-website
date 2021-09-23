@@ -1,5 +1,5 @@
 import './topbar.scss';
-import { Phone, Mail, LinkedIn, GitHub } from '@material-ui/icons';
+import { Phone, Mail, LinkedIn, GitHub, CloudDownload } from '@material-ui/icons';
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
 	return (
@@ -33,8 +33,12 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
 						{/* <span>https://github.com/Brent-prod</span> */}
 						<a href="https://github.com/Brent-prod">GitHub</a>
 					</div>
+					<div className="itemContainer">
+						<CloudDownload className="icon" />
+						<a href="https://www.canva.com/design/DAEmNCgUCEY/pWzPBWRKRoZbUhOxbVn-QQ/view?utm_content=DAEmNCgUCEY&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu">Resume</a>
+					</div>
 				</div>
-
+				
 				<div className="right">
 					<div
 						className="hamburger"
