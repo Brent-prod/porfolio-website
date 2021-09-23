@@ -13,12 +13,14 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		// align-items: flex-start;
 		justify-content: center;
 		float: right;
 
 		@include mobile {
 			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
 		}
 	}
 
@@ -57,6 +59,7 @@
 				@include mobile {
 					width: 200px;
 					height: 20px;
+					justify-content: space-around;
 				}
 			}
 
@@ -85,9 +88,10 @@
 					outline: none;
 				}
 			}
-			span {
-				color: green;
-			}
+		}
+		span {
+			font-size: 40px;
+			color: green;
 		}
 	}
 }

@@ -37,7 +37,8 @@
 		flex-wrap: wrap;
 
 		@include mobile {
-			width: 100%;
+			flex-direction: column;
+			height: 100%;
 		}
 
 		.item {
@@ -54,8 +55,8 @@
 			cursor: pointer;
 
 			@include mobile {
-				width: 130px;
-				height: 100px;
+				width: 200px;
+				height: 170px;
 			}
 
 			img {
