@@ -35,10 +35,12 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
 					</div>
 					<div className="itemContainer">
 						<CloudDownload className="icon" />
-						<a href="https://www.canva.com/design/DAEmNCgUCEY/pWzPBWRKRoZbUhOxbVn-QQ/view?utm_content=DAEmNCgUCEY&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu">Resume</a>
+						<a href="https://www.canva.com/design/DAEmNCgUCEY/pWzPBWRKRoZbUhOxbVn-QQ/view?utm_content=DAEmNCgUCEY&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu">
+							Resume
+						</a>
 					</div>
 				</div>
-				
+
 				<div className="right">
 					<div
 						className="hamburger"

@@ -4,14 +4,14 @@ import postToGoogle from '../../submitToGoogle';
 
 export default function Contact() {
 	const [ message, setMessage ] = useState(false); // this to change the confirmation message
-	const [ hideForm, setForm ] = useState(false); // this is to hide the form
+	const [ hideForm, setForm ] = useState(false); // this is to hide the form after hitting send
 
 	const handleSubmit = (e) => {
 		e.preventDefault(); // this it to prevent the page to reload when hitting the send button
 		setMessage(true);
 		postToGoogle()
 			.then((response) => {
-				// how to reset the form
+				// 
 			})
 			.catch((err) => {
 				// look up possible err msg to be displayed e.g. ERROR

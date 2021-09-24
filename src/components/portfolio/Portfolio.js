@@ -1,5 +1,5 @@
 import './portfolio.scss';
-import PortfolioList from '../portfolioList/PortfolioList';
+// import PortfolioList from '../portfolioList/PortfolioList';
 import { useEffect, useState } from 'react';
 import {
 	featuredPortfolio
@@ -64,21 +64,21 @@ export default function Portfolio() {
 		<div className="portfolio" id="portfolio">
 			<h1>Portfolio</h1>
 			<ul>
-				{list.map((item) => (
+				{/* {list.map((item) => (
 					<PortfolioList
 						title={item.title}
 						active={selected === item.id}
 						setSelected={setSelected}
 						id={item.id}
 					/>
-				))}
+				))} */}
 			</ul>
 			<div className="container">
 				{data.map((d) => (
 					<div className="item">
 						<img src={d.img} alt="" />
 						<a href={d.link}>{d.title}</a>
-						{/* <h3></h3> */}
+						{/* <h3>test</h3> */}
 					</div>
 				))}
 			</div>

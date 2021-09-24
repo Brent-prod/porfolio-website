@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 export default function Intro() {
 	const textRef = useRef(); // useRef() holds a mutable value in it's .current property. And then we can use it as we wish in the component
 
-	useEffect(() => {
+	useEffect(() => { // useEffect() is a React Hook similar to componentDidMount & componentDidUpdate
 		init(textRef.current, {
 			showCursor: true, // built in settings from iTyped library
 			backDelay: 1500,
@@ -29,12 +29,12 @@ export default function Intro() {
 						Software <span ref={textRef} />
 					</h3>
 				</div>
-				{/* <a href="#portfolio">
+				<a href="#portfolio">
 					<img
-						src="assets/arrowDown.jpeg"
-						alt="" // I want to change this to material-ui icon
+						src="assets/down.png"
+						alt=""
 					/>
-				</a> */}
+				</a>
 			</div>
 		</div>
 	);

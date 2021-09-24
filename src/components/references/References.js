@@ -29,7 +29,8 @@ export default function References() {
 			img:
 				'https://media-exp1.licdn.com/dms/image/C5103AQEcV5qU0Hyrkw/profile-displayphoto-shrink_100_100/0/1557342040343?e=1637193600&v=beta&t=BXISUMM_Z2GKv_rmv_NaHT0Gyof9ICMjGTicRvRUs70',
 			icon: 'assets/linkedin.png',
-			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem'
+			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem',
+			// lkdin: "https://www.linkedin.com/in/garywillis64/"
 		}
 	];
 
@@ -50,6 +51,7 @@ export default function References() {
 						<div className="bottom">
 							<h3>{d.name}</h3>
 							<h4>{d.title}</h4>
+							{/* <h5>{d.lkdin}</h5> */}
 						</div>
 					</div>
 				))}
