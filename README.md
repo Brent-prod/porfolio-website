@@ -7,7 +7,7 @@ I've designed it with scalability in mind so that will be easy to update in the 
 # 👀 SEE IT LIVE
 https://brentportfolio.surge.sh
 
-![Screen Shot 2021-09-25 at 09.07.48.png](./Users/brent/sei/projects/project4/porfolio-website/public/assets/ScreenShot2021-09-25at09.07.48.png)
+![Screen Shot 2021-09-25 at 09.07.48.png](public/assets/ScreenShot2021-09-25at09.07.48.png)
 
 # ⚙️ TECH USED
 
