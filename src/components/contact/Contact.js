@@ -41,6 +41,7 @@ export default function Contact() {
 				{message && <span>Thanks, I'll reply ASAP :)</span> // this will happen only after the state has been set to true
 				}
 			</div>
+			{/* <footer>© 2021 Brentan Productions</footer> */}
 		</div>
 	);
 }
