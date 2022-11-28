@@ -21,12 +21,12 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
 					<div className="itemContainer">
 						<Mail className="icon" />
 						{/* <span>silvio.brntn@gmail.com</span> */}
-						<a href="mailto:silvio.brntn@gmail.com">silvio.brntn@gmail.com</a>
+						<a href="mailto:brentan.productions@gmail.com">brentan.productions@gmail.com</a>
 					</div>
 					<div className="itemContainer">
 						<LinkedIn className="icon" />
-						{/* <span>https://www.linkedin.com/in/silvio-brentan</span> */}
-						<a href="https://www.linkedin.com/in/silvio-brentan">LinkedIn</a>
+						{/* <span>https://www.linkedin.com/in/s-brentan</span> */}
+						<a href="https://www.linkedin.com/in/s-brentan">LinkedIn</a>
 					</div>
 					<div className="itemContainer">
 						<GitHub className="icon" />

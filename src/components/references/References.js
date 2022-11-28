@@ -9,7 +9,7 @@ export default function References() {
 			img:
 				'https://media-exp1.licdn.com/dms/image/C5603AQHT-gsoKvxKTg/profile-displayphoto-shrink_100_100/0/1516542034629?e=1637193600&v=beta&t=DX9FTvT0_qtlw4vg8ciC3qfiYMTZxoOtSmk3wTBB1ms',
 			icon: 'assets/linkedin.png',
-			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.'
+			desc: 'Silvio was always cheerful and dependable, completely loyal and trustworthy, punctual and hardworking'
 		},
 		{
 			id: 2,
@@ -19,7 +19,7 @@ export default function References() {
 				'https://media-exp1.licdn.com/dms/image/C4D03AQGHCpclpPhsYQ/profile-displayphoto-shrink_200_200/0/1516623365292?e=1637193600&v=beta&t=leUttfuDhDzll0bgCn2KRQx5x87gFD3jtaUt_P0o44Q',
 			icon: 'assets/linkedin.png',
 			desc:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ',
+				'Silvio is a creative problem-solver, gets along well with others and has outstanding leadership skills',
 			featured: true
 		},
 		{
@@ -29,7 +29,7 @@ export default function References() {
 			img:
 				'https://media-exp1.licdn.com/dms/image/C5103AQEcV5qU0Hyrkw/profile-displayphoto-shrink_100_100/0/1557342040343?e=1637193600&v=beta&t=BXISUMM_Z2GKv_rmv_NaHT0Gyof9ICMjGTicRvRUs70',
 			icon: 'assets/linkedin.png',
-			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem',
+			desc: 'Silvio showed a very high work ethic, proved to be very honest and reliable and had a passion for the role',
 			// lkdin: "https://www.linkedin.com/in/garywillis64/"
 		}
 	];
