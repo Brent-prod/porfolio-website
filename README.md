@@ -8,7 +8,7 @@ I've designed it with scalability in mind so that will be easy to update in the 
 Link to portfolio website: https://brentportfolio.surge.sh
 
 Screenshot of the "homepage"
-![alt text](public/assets/Screenshot 2023-03-29 at 18.36.05.png)
+![Alt text](public/assets/Screenshot%202023-03-29%20at%2018.36.05.png)
 
 # ⚙️ TECH USED
 
