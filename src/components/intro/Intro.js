@@ -1,3 +1,4 @@
+import React from 'react';
 import './intro.scss';
 import { init } from 'ityped';
 import { useEffect, useRef } from 'react';
@@ -10,7 +11,7 @@ export default function Intro() {
 			showCursor: true, // built in settings from iTyped library
 			backDelay: 1500,
 			backSpeed: 60,
-			strings: [ 'Engineer', 'Developer', 'Creator' ]
+			strings: ['Engineer', 'Developer', 'Creator']
 		});
 	}, []);
 
@@ -18,7 +19,7 @@ export default function Intro() {
 		<div className="intro" id="intro">
 			<div className="left">
 				<div className="imgContainer">
-					<img src="assets/silvio-brentan-bust.png" alt="" />
+					<img src="assets/brentBust.png" alt="" />
 				</div>
 			</div>
 			<div className="right">

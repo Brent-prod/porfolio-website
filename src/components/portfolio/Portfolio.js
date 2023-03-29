@@ -1,3 +1,4 @@
+import React from 'react';
 import './portfolio.scss';
 // import PortfolioList from '../portfolioList/PortfolioList';
 import { useEffect, useState } from 'react';
@@ -10,8 +11,8 @@ import {
 } from '../../data';
 
 export default function Portfolio() {
-	const [ selected, setSelected ] = useState('featured');
-	const [ data, setData ] = useState([]); // empty array because we will use it below in the useEffect
+	const [selected, setSelected] = useState('featured');
+	const [data, setData] = useState([]); // empty array because we will use it below in the useEffect
 	const list = [
 		{
 			id: 'featured',
@@ -57,7 +58,7 @@ export default function Portfolio() {
 				//       setData(featuredPortfolio)
 			}
 		},
-		[ selected ]
+		[selected]
 	);
 
 	return (

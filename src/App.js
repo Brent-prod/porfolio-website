@@ -1,3 +1,4 @@
+import React from 'react';
 import Topbar from './components/topbar/Topbar';
 import Intro from './components/intro/Intro';
 import Contact from './components/contact/Contact';
@@ -9,7 +10,7 @@ import { useState } from 'react'; // used for the hambugrer state
 import Menu from './components/menu/Menu';
 
 function App() {
-	const [ menuOpen, setMenuOpen ] = useState(false); // for the hambuger state
+	const [menuOpen, setMenuOpen] = useState(false); // for the hambuger state
 	return (
 		<div className="app">
 			<Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
