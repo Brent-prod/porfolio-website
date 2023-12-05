@@ -6,11 +6,11 @@ import Portfolio from './components/portfolio/Portfolio';
 import References from './components/references/References';
 // import Works from './components/works/Works';
 import './app.scss'; // for style of this div app and sections
-import { useState } from 'react'; // used for the hambugrer state
+import { useState } from 'react'; // used for the hamburger state
 import Menu from './components/menu/Menu';
 
 function App() {
-	const [menuOpen, setMenuOpen] = useState(false); // for the hambuger state
+	const [menuOpen, setMenuOpen] = useState(false); // for the hamburger state
 	return (
 		<div className="app">
 			<Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

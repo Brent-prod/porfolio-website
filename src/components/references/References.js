@@ -1,4 +1,7 @@
+import React from 'react';
 import './references.scss';
+
+// Your component code goes here
 
 export default function References() {
 	const data = [
