@@ -335,7 +335,18 @@ export default function App() {
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", flexWrap:"wrap", gap:20 }}>
             <div>
               <div style={{ fontFamily:"'Playfair Display', serif", fontSize:48, fontWeight:900, color:passed?S.green:S.red, lineHeight:1 }}>{pct}%</div>
-              <div style={{ fontSize:20, fontWeight:700, color:S.text, marginTop:6 }}>{passed ? "Passed 🎉" : "Not quite — keep going!"}</div>
+              <div style={{ fontSize:20, fontWeight:700, color:S.text, marginTop:6 }}>
+  {passed ? (
+    <>
+      Passed{" "}
+      <span role="img" aria-label="celebration">
+        🎉
+      </span>
+    </>
+  ) : (
+    "Not quite — keep going!"
+  )}
+</div>
               <div style={{ fontSize:14, color:S.muted, marginTop:6 }}>{score} of {questions.length} correct · Pass mark: 74%</div>
             </div>
             <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16, minWidth:200 }}>
@@ -409,7 +420,12 @@ export default function App() {
                   );
                 })}
                 <div style={{ marginTop:10, borderTop:`1px solid ${S.border}`, paddingTop:10 }}>
-                  <span style={{ fontSize:12, color:S.muted, fontStyle:"italic" }}>💡 {qItem.explanation}</span>
+                  <span style={{ fontSize:12, color:S.muted, fontStyle:"italic" }}>
+  <span role="img" aria-label="lightbulb">
+    💡
+  </span>{" "}
+  {qItem.explanation}
+</span>
                 </div>
               </div>
             );
@@ -483,10 +499,21 @@ export default function App() {
             })}
           </div>
           <div style={{ display:"flex", flexDirection:"column", gap:8, marginTop:4 }}>
-            {[[S.gold,"Current"],[S.green,"Correct"],[S.red,"Wrong"],["transparent","Flagged ★"]].map(([c,l],i) => (
+            {[[S.gold,"Current"],[S.green,"Correct"],[S.red,"Wrong"],["transparent","Flagged"]].map(([c,l],i) => (
               <div key={l} style={{ display:"flex", alignItems:"center", gap:7 }}>
                 <div style={{ width:10, height:10, borderRadius:3, background:c==="transparent"?"transparent":c, border:c==="transparent"?`1px solid ${S.gold}`:"none" }}/>
-                <span style={{ fontSize:10, color:S.muted }}>{l}</span>
+                <span style={{ fontSize:10, color:S.muted }}>
+  {l === "Flagged" ? (
+    <>
+      Flagged{" "}
+      <span role="img" aria-label="star">
+        ★
+      </span>
+    </>
+  ) : (
+    l
+  )}
+</span>
               </div>
             ))}
           </div>
@@ -501,7 +528,12 @@ export default function App() {
               <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:20 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:10 }}>
                   <span style={{ fontSize:10, fontWeight:700, color:CAT_COLORS[q.category]||S.gold, textTransform:"uppercase", letterSpacing:1.5, background:`${CAT_COLORS[q.category]}18`, padding:"4px 10px", borderRadius:20 }}>{q.category}</span>
-                  {q.multi && <span style={{ fontSize:10, fontWeight:700, color:S.gold, background:S.goldDim, padding:"4px 10px", borderRadius:20, textTransform:"uppercase", letterSpacing:1 }}>Select all ✦</span>}
+                  {q.multi && <span style={{ fontSize:10, fontWeight:700, color:S.gold, background:S.goldDim, padding:"4px 10px", borderRadius:20, textTransform:"uppercase", letterSpacing:1 }}><>
+  Select all{" "}
+  <span role="img" aria-label="sparkle">
+    ✦
+  </span>
+</></span>}
                 </div>
                 <div style={{ display:"flex", alignItems:"center", gap:10 }}>
                   <span style={{ fontFamily:"'DM Mono', monospace", fontSize:12, color:S.muted }}>Q{current+1}/{EXAM_SIZE}</span>
