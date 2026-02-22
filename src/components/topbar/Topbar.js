@@ -43,14 +43,17 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
 				</div>
 
 				<div className="right">
-					<div
+					<button
+						type="button"
 						className="hamburger"
+						aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+						aria-expanded={menuOpen}
 						onClick={() => setMenuOpen(!menuOpen)} //on click function to toggle the active status
 					>
 						<span className="line1" />
 						<span className="line2" />
 						<span className="line3" />
-					</div>
+					</button>
 				</div>
 			</div>
 		</div>

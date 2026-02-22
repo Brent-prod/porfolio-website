@@ -43,6 +43,7 @@ export default function References() {
 			<div className="container">
 				{data.map((d) => (
 					<div
+						key={d.id}
 						className={d.featured ? 'card featured' : 'card'} // ternary operator to choose either one or the other className
 					>
 						<div className="top">

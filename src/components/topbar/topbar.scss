@@ -1,4 +1,4 @@
-@import '../../global.scss'; // to import the mainColor
+@use '../../global' as *;
 
 .topbar {
 	width: 100%;
@@ -67,6 +67,9 @@
 				flex-direction: column;
 				justify-content: space-between;
 				cursor: pointer;
+				border: 0;
+				padding: 0;
+				background: transparent;
 
 				span {
 					width: 100%;
@@ -74,6 +77,11 @@
 					background-color: $mainColor;
 					transform-origin: left; // to make the lines start from the left part of the hambburger
 					transition: all 2s ease;
+				}
+
+				&:focus-visible {
+					outline: 2px solid currentColor;
+					outline-offset: 4px;
 				}
 			}
 		}

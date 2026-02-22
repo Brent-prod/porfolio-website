@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@use '../../global' as *;
 
 .intro {
 	background-color: white;
@@ -52,7 +52,7 @@
 
 			@include mobile {
 				padding-left: 0;
-				align-item: center;
+				align-items: center;
 			}
 
 			h1 {

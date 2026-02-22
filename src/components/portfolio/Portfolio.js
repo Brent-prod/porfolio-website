@@ -26,8 +26,8 @@ export default function Portfolio() {
 				</div>
 
 				{/* Existing portfolio items */}
-				{data.map((d, i) => (
-					<div className="item" key={i}>
+				{data.map((d) => (
+					<div className="item" key={d.id}>
 						<img src={d.img} alt="" />
 						<a
 							href={d.link}

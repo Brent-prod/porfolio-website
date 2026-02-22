@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@use "../../global" as *;
 
 .contact {
 	background-color: white;
@@ -84,14 +84,23 @@
 				font-weight: 500;
 				cursor: pointer;
 
-				&:focus {
-					outline: none;
+				&:focus-visible {
+					outline: 2px solid $mainColor;
+					outline-offset: 2px;
 				}
 			}
 		}
-		span {
+		.status {
 			font-size: 40px;
-			color: green;
+			text-align: center;
+
+			&.success {
+				color: green;
+			}
+
+			&.error {
+				color: crimson;
+			}
 		}
 	}
 }
