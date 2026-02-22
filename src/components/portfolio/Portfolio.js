@@ -1,87 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './portfolio.scss';
-// import PortfolioList from '../portfolioList/PortfolioList';
-import { useEffect, useState } from 'react';
-import {
-	featuredPortfolio
-	// webPortfolio,
-	// mobilePortfolio,
-	// designPortfolio,
-	// contentPortfolio,
-} from '../../data';
+import { featuredPortfolio } from '../../data';
 
 export default function Portfolio() {
-	const [selected, setSelected] = useState('featured');
-	const [data, setData] = useState([]); // empty array because we will use it below in the useEffect
-	const list = [
-		{
-			id: 'featured',
-			title: 'Featured'
-		}
-		// {
-		//    id: "web",
-		//    title: 'Web App',
-		// },
-		// {
-		//    id: "mobile",
-		//    title: 'Mobile App',
-		// },
-		// {
-		//    id: "design",
-		//    title: 'Design',
-		// },
-		// {
-		//    id: "content",
-		//    title: 'Content',
-		// },
-	];
+	const [data, setData] = useState([]);
 
-	useEffect(
-		() => {
-			switch (selected) {
-				case 'featured':
-					setData(featuredPortfolio);
-					break;
-				// case "web":
-				//    setData(webPortfolio);
-				//    break;
-				// case "mobile":
-				//    setData(mobilePortfolio);
-				//    break;
-				// case "design":
-				//    setData(designPortfolio);
-				//    break;
-				// case "content":
-				//    setData(contentPortfolio);
-				//    break;
-				//    default:
-				//       setData(featuredPortfolio)
-			}
-		},
-		[selected]
-	);
+	useEffect(() => {
+		setData(featuredPortfolio);
+	}, []);
 
 	return (
 		<div className="portfolio" id="portfolio">
 			<h1>Portfolio</h1>
-			<ul>
-				{/* {list.map((item) => (
-					<PortfolioList
-						title={item.title}
-						active={selected === item.id}
-						setSelected={setSelected}
-						id={item.id}
-					/>
-				))} */}
-			</ul>
 			<div className="container">
-				{data.map((d) => (
-					<div className="item">
+
+				{/* CSM Exam App — pinned first */}
+				<div className="item">
+					<img
+						src="/assets/CsmPracticeExam.png"
+						alt="CSM Practice Exam"
+					/>
+					<a href="/csm" target="_blank" rel="noopener noreferrer">
+						<span role="img" aria-label="graduation cap">🎓</span> CSM Practice Exam
+					</a>
+				</div>
+
+				{/* Existing portfolio items */}
+				{data.map((d, i) => (
+					<div className="item" key={i}>
 						<img src={d.img} alt="" />
-						<a href={d.link}>{d.title}</a>
-						{/* <h3>test</h3> */}
+						<a
+							href={d.link}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{d.title}
+						</a>
 					</div>
 				))}
+
 			</div>
 		</div>
 	);

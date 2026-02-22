@@ -3,20 +3,9 @@ export const featuredPortfolio = [
 		id: 1,
 		title: 'Tic Tac Toe',
 		link: 'https://brent-prod.github.io/tictactoe/',
-		img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoAqPw1xituLWmZ1u2UWfU953Nal7XthgdQ&usqp=CAU'
+		img: '/assets/TicTacToe.png'
 	},
-	{
-		id: 2,
-		title: 'Mia Pastry Shop',
-		link: 'https://pacific-beach-90969.herokuapp.com/',
-		img: 'assets/mia-pastry-shop.png'
-	},
-	{
-		id: 3,
-		title: 'Job Watch',
-		link: 'https://blooming-basin-94429.herokuapp.com/',
-		img: 'assets/job-watch.png'
-	}
+
 	//  {
 	//    id: 4,
 	//    title: "Relax Mobile App",

@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Topbar from './components/topbar/Topbar';
 import Intro from './components/intro/Intro';
 import Contact from './components/contact/Contact';
 import Portfolio from './components/portfolio/Portfolio';
 import References from './components/references/References';
-// import Works from './components/works/Works';
-import './app.scss'; // for style of this div app and sections
-import { useState } from 'react'; // used for the hamburger state
 import Menu from './components/menu/Menu';
+import CSMExam from './components/CSMExam';
+import './app.scss';
 
-function App() {
-	const [menuOpen, setMenuOpen] = useState(false); // for the hamburger state
+function MainSite() {
+	const [menuOpen, setMenuOpen] = useState(false);
 	return (
 		<div className="app">
 			<Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
@@ -18,11 +18,21 @@ function App() {
 			<div className="sections">
 				<Intro />
 				<Portfolio />
-				{/* <Works /> */}
 				<References />
 				<Contact />
 			</div>
 		</div>
+	);
+}
+
+function App() {
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<MainSite />} />
+				<Route path="/csm" element={<CSMExam />} />
+			</Routes>
+		</Router>
 	);
 }
 
